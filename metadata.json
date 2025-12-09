@@ -1,0 +1,5 @@
+{
+  "name": "Covariance Calculator & Analyzer",
+  "description": "A powerful statistical tool to calculate covariance between two datasets, visualize the relationship with scatter plots, and receive AI-powered insights.",
+  "requestFramePermissions": []
+}
