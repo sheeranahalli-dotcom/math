@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       server: {
-        port: 3000,
+        port: parseInt(process.env.PORT || '3000', 10),
         host: '0.0.0.0',
       },
       plugins: [react()],
@@ -17,6 +17,19 @@ export default defineConfig(({ mode }) => {
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
+        }
+      },
+      build: {
+        chunkSizeWarningLimit: 1000,
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              'react-vendor': ['react', 'react-dom'],
+              'charts': ['recharts'],
+              'genai': ['@google/genai'],
+              'markdown': ['react-markdown']
+            }
+          }
         }
       }
     };
