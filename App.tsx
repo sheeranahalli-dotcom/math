@@ -46,7 +46,7 @@ const App: React.FC = () => {
             <div className="bg-indigo-600 p-2 rounded-lg">
               <Calculator className="w-6 h-6 text-white" />
             </div>
-            <h1 className="text-xl font-bold tracking-tight text-gray-900">Covariance Calc</h1>
+            <h1 className="text-xl font-bold tracking-tight text-gray-900">Sunil M S</h1>
           </div>
           <a href="#" className="text-gray-500 hover:text-indigo-600 transition-colors">
             <Info className="w-5 h-5" />
